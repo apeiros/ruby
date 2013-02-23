@@ -2210,10 +2210,12 @@ rb_obj_ivar_defined(VALUE obj, VALUE iv)
 /*
  *  call-seq:
  *     mod.class_variable_get(symbol)    -> obj
+ *     mod.class_variable_get(string)    -> obj
  *
  *  Returns the value of the given class variable (or throws a
  *  <code>NameError</code> exception). The <code>@@</code> part of the
  *  variable name should be included for regular class variables
+ *  String arguments are converted to symbols.
  *
  *     class Fred
  *       @@foo = 99
