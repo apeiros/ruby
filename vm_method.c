@@ -1437,6 +1437,7 @@ top_private(int argc, VALUE *argv)
 /*
  *  call-seq:
  *     module_function(symbol, ...)    -> self
+ *     module_function(string, ...)    -> self
  *
  *  Creates module functions for the named methods. These functions may
  *  be called with the module as a receiver, and also become available
@@ -1445,6 +1446,7 @@ top_private(int argc, VALUE *argv)
  *  independently. The instance-method versions are made private. If
  *  used with no arguments, subsequently defined methods become module
  *  functions.
+ *  String arguments are converted to symbols.
  *
  *     module Mod
  *       def one
