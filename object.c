@@ -1863,11 +1863,13 @@ rb_mod_attr_writer(int argc, VALUE *argv, VALUE klass)
 /*
  *  call-seq:
  *     attr_accessor(symbol, ...)    -> nil
+ *     attr_accessor(string, ...)    -> nil
  *
  *  Defines a named attribute for this module, where the name is
  *  <i>symbol.</i><code>id2name</code>, creating an instance variable
  *  (<code>@name</code>) and a corresponding access method to read it.
  *  Also creates a method called <code>name=</code> to set the attribute.
+ *  String arguments are converted to symbols.
  *
  *     module Mod
  *       attr_accessor(:one, :two)
