@@ -2281,9 +2281,11 @@ rb_mod_cvar_set(VALUE obj, VALUE iv, VALUE val)
 /*
  *  call-seq:
  *     obj.class_variable_defined?(symbol)    -> true or false
+ *     obj.class_variable_defined?(string)    -> true or false
  *
  *  Returns <code>true</code> if the given class variable is defined
  *  in <i>obj</i>.
+ *  String arguments are converted to symbols.
  *
  *     class Fred
  *       @@foo = 99
