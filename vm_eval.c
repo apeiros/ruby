@@ -862,13 +862,17 @@ send_internal(int argc, const VALUE *argv, VALUE recv, call_type scope)
 }
 
 /*
- *  call-seq:
- *     foo.send(symbol [, args...])        -> obj
- *     foo.__send__(symbol [, args...])      -> obj
+ * call-seq:
+ *    foo.send(symbol [, args...])       -> obj
+ *    foo.__send__(symbol [, args...])   -> obj
+ *    foo.send(string [, args...])       -> obj
+ *    foo.__send__(string [, args...])   -> obj
  *
  *  Invokes the method identified by _symbol_, passing it any
  *  arguments specified. You can use <code>__send__</code> if the name
  *  +send+ clashes with an existing method in _obj_.
+ *  When the method is identified by a string, the string is converted
+ *  to a symbol.
  *
  *     class Klass
  *       def hello(*args)
