@@ -995,10 +995,12 @@ check_definition(VALUE mod, VALUE mid, rb_method_flag_t noex)
 /*
  *  call-seq:
  *     mod.public_method_defined?(symbol)   -> true or false
+ *     mod.public_method_defined?(string)   -> true or false
  *
  *  Returns +true+ if the named public method is defined by
  *  _mod_ (or its included modules and, if _mod_ is a class,
  *  its ancestors).
+ *  String arguments are converted to symbols.
  *
  *     module A
  *       def method1()  end
