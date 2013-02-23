@@ -1286,10 +1286,12 @@ set_method_visibility(VALUE self, int argc, VALUE *argv, rb_method_flag_t ex)
  *  call-seq:
  *     public                 -> self
  *     public(symbol, ...)    -> self
+ *     public(string, ...)    -> self
  *
  *  With no arguments, sets the default visibility for subsequently
  *  defined methods to public. With arguments, sets the named methods to
  *  have public visibility.
+ *  String arguments are converted to symbols.
  */
 
 static VALUE
