@@ -1336,10 +1336,12 @@ rb_mod_protected(int argc, VALUE *argv, VALUE module)
  *  call-seq:
  *     private                 -> self
  *     private(symbol, ...)    -> self
+ *     private(string, ...)    -> self
  *
  *  With no arguments, sets the default visibility for subsequently
  *  defined methods to private. With arguments, sets the named methods
  *  to have private visibility.
+ *  String arguments are converted to symbols.
  *
  *     module Mod
  *       def a()  end
