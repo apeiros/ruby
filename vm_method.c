@@ -880,11 +880,13 @@ rb_undef(VALUE klass, ID id)
 /*
  *  call-seq:
  *     undef_method(symbol)    -> self
+ *     undef_method(string)    -> self
  *
  *  Prevents the current class from responding to calls to the named
  *  method. Contrast this with <code>remove_method</code>, which deletes
  *  the method from the particular class; Ruby will still search
  *  superclasses and mixed-in modules for a possible receiver.
+ *  String arguments are converted to symbols.
  *
  *     class Parent
  *       def hello
