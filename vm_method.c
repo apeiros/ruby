@@ -1413,10 +1413,13 @@ rb_mod_private_method(int argc, VALUE *argv, VALUE obj)
  *  call-seq:
  *     public
  *     public(symbol, ...)
+ *     public(string, ...)
  *
  *  With no arguments, sets the default visibility for subsequently
  *  defined methods to public. With arguments, sets the named methods to
  *  have public visibility.
+ *
+ *  String arguments are converted to symbols.
  */
 
 static VALUE
