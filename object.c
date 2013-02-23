@@ -2169,9 +2169,11 @@ rb_obj_ivar_set(VALUE obj, VALUE iv, VALUE val)
 /*
  *  call-seq:
  *     obj.instance_variable_defined?(symbol)    -> true or false
+ *     obj.instance_variable_defined?(string)    -> true or false
  *
  *  Returns <code>true</code> if the given instance variable is
  *  defined in <i>obj</i>.
+ *  String arguments are converted to symbols.
  *
  *     class Fred
  *       def initialize(p1, p2)
