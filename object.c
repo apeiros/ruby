@@ -2248,9 +2248,12 @@ rb_mod_cvar_get(VALUE obj, VALUE iv)
 /*
  *  call-seq:
  *     obj.class_variable_set(symbol, obj)    -> obj
+ *     obj.class_variable_set(string, obj)    -> obj
  *
  *  Sets the class variable names by <i>symbol</i> to
  *  <i>object</i>.
+ *  If the class variable name is passed as a string, that string
+ *  is converted to a symbol.
  *
  *     class Fred
  *       @@foo = 99
