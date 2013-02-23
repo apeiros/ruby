@@ -940,10 +940,12 @@ rb_mod_undef_method(int argc, VALUE *argv, VALUE mod)
 /*
  *  call-seq:
  *     mod.method_defined?(symbol)    -> true or false
+ *     mod.method_defined?(string)    -> true or false
  *
  *  Returns +true+ if the named method is defined by
  *  _mod_ (or its included modules and, if _mod_ is a class,
  *  its ancestors). Public and protected methods are matched.
+ *  String arguments are converted to symbols.
  *
  *     module A
  *       def method1()  end
