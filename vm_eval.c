@@ -892,10 +892,13 @@ rb_f_send(int argc, VALUE *argv, VALUE recv)
 /*
  *  call-seq:
  *     obj.public_send(symbol [, args...])  -> obj
+ *     obj.public_send(string [, args...])  -> obj
  *
  *  Invokes the method identified by _symbol_, passing it any
  *  arguments specified. Unlike send, public_send calls public
  *  methods only.
+ *  When the method is identified by a string, the string is converted
+ *  to a symbol.
  *
  *     1.public_send(:puts, "hello")  # causes NoMethodError
  */
