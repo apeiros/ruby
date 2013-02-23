@@ -1806,12 +1806,15 @@ rb_class_get_superclass(VALUE klass)
 
 /*
  *  call-seq:
- *     attr_reader(symbol, ...)    -> nil
- *     attr(symbol, ...)             -> nil
+ *     attr_reader(symbol, ...)  -> nil
+ *     attr(symbol, ...)         -> nil
+ *     attr_reader(string, ...)  -> nil
+ *     attr(string, ...)         -> nil
  *
  *  Creates instance variables and corresponding methods that return the
  *  value of each instance variable. Equivalent to calling
  *  ``<code>attr</code><i>:name</i>'' on each name in turn.
+ *  String arguments are converted to symbols.
  */
 
 static VALUE
