@@ -2091,12 +2091,14 @@ rb_mod_const_defined(int argc, VALUE *argv, VALUE mod)
 /*
  *  call-seq:
  *     obj.instance_variable_get(symbol)    -> obj
+ *     obj.instance_variable_get(string)    -> obj
  *
  *  Returns the value of the given instance variable, or nil if the
  *  instance variable is not set. The <code>@</code> part of the
  *  variable name should be included for regular instance
  *  variables. Throws a <code>NameError</code> exception if the
  *  supplied symbol is not valid as an instance variable name.
+ *  String arguments are converted to symbols.
  *
  *     class Fred
  *       def initialize(p1, p2)
