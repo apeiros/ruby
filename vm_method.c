@@ -1311,10 +1311,12 @@ rb_mod_public(int argc, VALUE *argv, VALUE module)
  *  call-seq:
  *     protected                -> self
  *     protected(symbol, ...)   -> self
+ *     protected(string, ...)   -> self
  *
  *  With no arguments, sets the default visibility for subsequently
  *  defined methods to protected. With arguments, sets the named methods
  *  to have protected visibility.
+ *  String arguments are converted to symbols.
  */
 
 static VALUE
