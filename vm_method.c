@@ -1369,8 +1369,11 @@ rb_mod_private(int argc, VALUE *argv, VALUE module)
 /*
  *  call-seq:
  *     mod.public_class_method(symbol, ...)    -> mod
+ *     mod.public_class_method(string, ...)    -> mod
  *
  *  Makes a list of existing class methods public.
+ *
+ *  String arguments are converted to symbols.
  */
 
 static VALUE
