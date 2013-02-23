@@ -1591,6 +1591,7 @@ rb_respond_to(VALUE obj, ID id)
 /*
  *  call-seq:
  *     obj.respond_to?(symbol, include_all=false) -> true or false
+ *     obj.respond_to?(string, include_all=false) -> true or false
  *
  *  Returns +true+ if _obj_ responds to the given method.  Private and
  *  protected methods are included in the search only if the optional
@@ -1602,6 +1603,9 @@ rb_respond_to(VALUE obj, ID id)
  *
  *  If the method is not defined, <code>respond_to_missing?</code>
  *  method is called and the result is returned.
+ *
+ *  When the method name parameter is given as a string, the string is
+ *  converted to a symbol.
  */
 
 static VALUE
