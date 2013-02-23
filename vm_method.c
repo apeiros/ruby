@@ -1029,10 +1029,12 @@ rb_mod_public_method_defined(VALUE mod, VALUE mid)
 /*
  *  call-seq:
  *     mod.private_method_defined?(symbol)    -> true or false
+ *     mod.private_method_defined?(string)    -> true or false
  *
  *  Returns +true+ if the named private method is defined by
  *  _ mod_ (or its included modules and, if _mod_ is a class,
  *  its ancestors).
+ *  String arguments are converted to symbols.
  *
  *     module A
  *       def method1()  end
