@@ -1386,9 +1386,12 @@ rb_mod_public_method(int argc, VALUE *argv, VALUE obj)
 /*
  *  call-seq:
  *     mod.private_class_method(symbol, ...)   -> mod
+ *     mod.private_class_method(string, ...)   -> mod
  *
  *  Makes existing class methods private. Often used to hide the default
  *  constructor <code>new</code>.
+ *
+ *  String arguments are converted to symbols.
  *
  *     class SimpleSingleton  # Not thread safe
  *       private_class_method :new
